@@ -1,5 +1,5 @@
 {
-    "name": "abivia/plaid",
+    "name": "serter35/laravel-plaid",
     "description": "Plaid for Laravel",
     "keywords": [
         "abivia",
@@ -12,6 +12,11 @@
         {
             "name": "Alan Langford",
             "email": "foss@abivia.com",
+            "role": "Developer"
+        }, 
+        {
+            "name": "Serter Serbest",
+            "email": "serter.serbest@gmail.com",
             "role": "Developer"
         }
     ],
