@@ -51,4 +51,28 @@ class Transactions extends AbstractResource
         return $this;
     }
 
+    /**
+     * Sync transactions for a particular Account.
+     *
+     * @param string $accessToken
+     * @param string $cursor
+     * @param int $count
+     * @param array $options
+     * @return $this
+     * @throws PlaidRequestException
+     */
+    public function sync(string $accessToken, string $cursor = 'now', int $count = 100, array $options = []): self
+    {
+        $this->sendRequest(
+            'transactions/sync',
+            [
+                'access_token' => $accessToken,
+                'cursor' => $cursor,
+                'count' => min($count, 500),
+                'options' => (object) $options
+            ]
+        );
+
+        return $this;
+    }
 }
